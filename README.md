@@ -15,26 +15,26 @@ rpmrebuild -s --package --notest-install -e loolwsd-2.1.2-6.el7.centos.x86_64.rp
 (ref https://stackoverflow.com/questions/5613954/extract-the-spec-file-from-rpm-package)
 
 # Manual build
-## Requirements
+1. Install Requirements
+Centos packages:
 ```
 libpng-devel
 libcap-devel
 cppunit-devel
 poco-devel
 npm
-nodejs
 pcre-devel
 openssl-devel
 python-polib
+epel-release # for nodejs
+nodejs
 ```
+and npm package:
 ```
 sudo npm install -g jake
 ```
-spectool
 
-EPEL is required for nodejs!
-
-## Build
+2. built
 
 ```
 ./autogen.sh

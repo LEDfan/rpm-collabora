@@ -199,8 +199,6 @@ BuildRequires:  git
 %description
 
 %prep
-#%setup
-#git clone https://anongit.freedesktop.org/git/libreoffice/online.git -b 2.1.2 .
 cp %{SOURCE1} .
 cp %{SOURCE2} .
 
