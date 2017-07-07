@@ -1,0 +1,3 @@
+*.rpm
+.vagrant
+static.tar.gz
