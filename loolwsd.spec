@@ -204,12 +204,14 @@ cp %{SOURCE2} .
 
 %build
 ./autogen.sh
-./configure --with-max-documents=10000 --with-max-connections=10000 --with-lokit-path=bundled/include --prefix=/usr
-
+./configure --with-max-documents=10000 --with-max-connections=10000 --with-lokit-path=bundled/include --prefix= # the prefix is left intentional empty!
 
 %install
 %make_install
 #cp %{SOURCE0} static.tar.gz
+mkdir %{buildroot}/usr
+mv %{buildroot}/share %{buildroot}/usr
+mv %{buildroot}/bin %{buildroot}/usr
 tar -zvxf static.tar.gz -C %{buildroot}
 mkdir -p %{buildroot}/usr/share/loolwsd/loleaflet/dist/node_modules/jquery-ui/themes/ui-lightness/images
 mv ui-bg_highlight-soft_100_eeeeee_1x100.png %{buildroot}/usr/share/loolwsd/loleaflet/dist/node_modules/jquery-ui/themes/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png
