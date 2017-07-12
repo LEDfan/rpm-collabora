@@ -11,9 +11,9 @@ RUN yum -y update \
   && rpm --import repomd.xml.key \
   && yum-config-manager -y --add-repo https://www.collaboraoffice.com/repos/CollaboraOnline/CODE-centos7
 RUN  yum -y groupinstall "Development Tools" \
-  && yum install -y libpng-devel libcap-devel cppunit-devel libtool poco-devel npm pcre-devel openssl-devel python-polib epel-release rpm-build git fontconfig python-polib
+  && yum install -y libpng-devel libcap-devel cppunit-devel libtool poco-devel pcre-devel openssl-devel epel-release rpm-build git fontconfig
 # first epel is needed
-RUN yum install -y nodejs npm
+RUN yum install -y nodejs npm python-polib
 RUN npm install -g jake
 
 RUN echo ${HOST_UID} ${HOST_GID} && \
