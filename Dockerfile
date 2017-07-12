@@ -22,5 +22,4 @@ adduser -u ${HOST_UID} -g ${HOST_GID} jenkins
 
 WORKDIR /data
 USER jenkins
-CMD make
-CMD cp -r ~/rpmbuild/RPMS/x86_64/*.rpm /data
+CMD make && cp -r ~/rpmbuild/RPMS/x86_64/*.rpm /data
