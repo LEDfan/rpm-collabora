@@ -5,7 +5,7 @@ all: build
 build:
 	rm -rf ~/rpmbuild/BUILD
 	mkdir -p ~/rpmbuild/BUILD
-	git clone https://anongit.freedesktop.org/git/libreoffice/online.git -b 2.1.2 ~/rpmbuild/BUILD
+	git clone https://anongit.freedesktop.org/git/libreoffice/online.git -b 2.1.3-4 ~/rpmbuild/BUILD
 	tar -czvf static.tar.gz -C static .
 	mkdir -p ~/rpmbuild/SOURCES
 	cp static.tar.gz ~/rpmbuild/SOURCES

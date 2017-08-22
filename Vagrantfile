@@ -7,6 +7,6 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", path: "install_deps.sh"
 
-  config.vm.provision "shell", path: "built.sh", privileged: false
+  config.vm.provision "shell", path: "build.sh", privileged: false
 
 end

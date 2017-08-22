@@ -34,7 +34,7 @@ and npm package:
 sudo npm install -g jake
 ```
 
-2. built
+2. build
 
 ```
 ./autogen.sh

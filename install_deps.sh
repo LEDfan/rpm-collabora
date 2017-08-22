@@ -6,5 +6,6 @@ sudo yum-config-manager -y --add-repo https://www.collaboraoffice.com/repos/Coll
 
 sudo yum -y groupinstall "Development Tools"
 sudo yum install -y libpng-devel libcap-devel cppunit-devel libtool poco-devel npm pcre-devel openssl-devel python-polib epel-release rpm-build git fontconfig
+sudo rpm -i https://rpm.nodesource.com/pub_6.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm
 sudo yum install -y nodejs
 sudo npm install -g jake

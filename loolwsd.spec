@@ -30,7 +30,7 @@ AutoReq: no
 #ARCH:         x86_64
 BuildArch:     x86_64
 Name:          loolwsd
-Version:       2.1.2
+Version:       2.1.3
 Release:       6.el7.centos
 License:       MPL
 Group:         Unspecified
@@ -48,10 +48,10 @@ Source2:        ui-bg_highlight-soft_100_eeeeee_1x100.png
 #Source9:       ui-bg_highlight-soft_100_eeeeee_1x100.png
 Vendor:        Collabora
 Obsoletes:     loleaflet <= 1.5.8
-Provides:      config(loolwsd) = 2.1.2-6.el7.centos
+Provides:      config(loolwsd) = 2.1.3-4.el7.centos
 Provides:      loleaflet = 1.5.8
-Provides:      loolwsd = 2.1.2-6.el7.centos
-Provides:      loolwsd(x86-64) = 2.1.2-6.el7.centos
+Provides:      loolwsd = 2.1.3-4.el7.centos
+Provides:      loolwsd(x86-64) = 2.1.2-4.el7.centos
 Requires:      /bin/bash
 Requires:      /bin/sh
 Requires:      /bin/sh
@@ -78,7 +78,7 @@ Requires:      collaboraofficebasis5.3-impress >= 5.3.10.15
 Requires:      collaboraofficebasis5.3-noto-fonts >= 5.3.10.15
 Requires:      collaboraofficebasis5.3-ooofonts >= 5.3.10.15
 Requires:      collaboraofficebasis5.3-writer >= 5.3.10.15
-Requires:      config(loolwsd) = 2.1.2-6.el7.centos
+Requires:      config(loolwsd) = 2.1.3-4.el7.centos
 Requires:      coreutils
 Requires:      cups-libs
 Requires:      dbus-glib
@@ -230,8 +230,8 @@ mv ui-bg_highlight-soft_100_eeeeee_1x100.png %{buildroot}/usr/share/loolwsd/lole
 %attr(0755, root, root) "/usr/bin/loolwsd"
 %attr(0755, root, root) "/usr/bin/loolwsd-systemplate-setup"
 %attr(0444, root, root) "/usr/lib/systemd/system/loolwsd.service"
-%dir %attr(0755, root, root) "/usr/share/doc/loolwsd-2.1.2"
-%doc %attr(0644, root, root) "/usr/share/doc/loolwsd-2.1.2/README"
+%dir %attr(0755, root, root) "/usr/share/doc/loolwsd-2.1.3"
+%doc %attr(0644, root, root) "/usr/share/doc/loolwsd-2.1.3/README"
 %doc %attr(0644, root, root) "/usr/share/doc/loolwsd/README"
 %doc %attr(0644, root, root) "/usr/share/doc/loolwsd/README.vars"
 %doc %attr(0644, root, root) "/usr/share/doc/loolwsd/protocol.txt"
