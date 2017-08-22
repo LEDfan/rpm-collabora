@@ -13,8 +13,8 @@ RUN yum -y update \
 RUN  yum -y groupinstall "Development Tools" \
   && yum install -y libpng-devel libcap-devel cppunit-devel libtool poco-devel pcre-devel openssl-devel epel-release rpm-build git fontconfig
 # first epel is needed
-# enable testing for https://bugzilla.redhat.com/show_bug.cgi?id=1481470
-RUN yum install --enablerepo=epel-testing -y nodejs npm python-polib
+RUN rpm -i https://rpm.nodesource.com/pub_6.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm
+RUN yum install -y nodejs python-polib
 RUN npm install -g jake
 
 RUN echo ${HOST_UID} ${HOST_GID} && \
